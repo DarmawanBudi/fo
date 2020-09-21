@@ -4,7 +4,7 @@
 
 
 ## Main Dev
-- Budi Darmawan
+- Darmawan Budi
 
 ## Project setup
 ```
