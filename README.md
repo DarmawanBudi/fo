@@ -1,11 +1,10 @@
-# alfabank-front-office
+# front-office
 
 ## Deployed URL
-https://alfabank-fo.web.app
+
 
 ## Main Dev
-- Budi Darmawan (lead)
-- Andi Amin
+- Budi Darmawan
 
 ## Project setup
 ```
