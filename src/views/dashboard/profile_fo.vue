@@ -65,8 +65,6 @@ export default {
   },
   mounted() {
     this.getfo();
-    // this.$info();
-    // console.log(this);
   },
   methods: {
     uploadImage(event) {
@@ -74,8 +72,6 @@ export default {
       this.preview = URL.createObjectURL(event.target.files[0]);
     },
     getfo() {
-      // this.loading = true;
-
       axios
         .get("/frontoffice/profile", {
           headers: {
@@ -85,10 +81,8 @@ export default {
         .then((response) => {
           console.log(response);
           if (response.data.success == true) {
-            
             this.fo = response.data.data;
             this.preview = response.data.data.foto;
-            // this.loading = false;
           }
         });
     },

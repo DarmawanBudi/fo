@@ -94,7 +94,6 @@ export default {
     };
   },
   mounted() {
-    // this.postSiswa();
     this.getProgramKursus();
   },
   methods: {
@@ -145,7 +144,6 @@ export default {
           // console.log(response.data.success);
         }
       });
-      // console.log(this.postSiswa);
     },
   },
 };

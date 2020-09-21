@@ -6,11 +6,7 @@
 </template>
 
 <script>
-export default {
-// mounted () {
-// this.$info('hay')
-// }
-}
+export default {}
 </script>
 
 <style>

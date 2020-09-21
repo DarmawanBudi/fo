@@ -53,14 +53,13 @@ export default {
   },
   mounted() {
     this.getabsensi();
-    // this.$info();
   },
   methods: {
     getabsensi() {
       this.loading = true;
       axios.get("/frontoffice/absensi").then((response) => {
-        this.absensi = response.data.data;
         if (response.data.success == true) {
+          this.absensi = response.data.data;
           this.loading = false;
         }
       });

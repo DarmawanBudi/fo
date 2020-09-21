@@ -25,11 +25,6 @@
             </div>
           </div>
           <input type="submit" value="login" class="btn btn-danger radiusku" />
-          <!-- <b-button
-          pill
-          variant="danger"
-          :to="{name:'dashboard'}"
-        >Login</b-button> -->
         </form>
       </div>
     </div>
@@ -53,12 +48,10 @@ export default {
   },
   methods: {
     postLogin() {
-      // console.log(this.login);
       axios.post("/frontoffice/login",this.login).then((response) => {
 
         if (response.data.success == true) {
           this.login = response.data.data;
-          // console.log(response);
           this.loading = false;
           this.$router.push({name:'dashboard'})
           localStorage.setItem("token",response.data.data.token)

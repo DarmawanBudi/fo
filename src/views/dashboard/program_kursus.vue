@@ -43,8 +43,8 @@ export default {
     getProgramKursus() {
       this.loading = true;
       axios.get("/frontoffice/programkursus").then((response) => {
-        this.ProgramKursus = response.data.data;
         if (response.data.success == true) {
+          this.ProgramKursus = response.data.data;
           this.loading = false;
         }
       });

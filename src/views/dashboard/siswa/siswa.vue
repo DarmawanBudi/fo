@@ -49,79 +49,9 @@
               </span>
             </div>
           </div>
-
-          <!-- <div class="d-flex justify-content-between">
-            <span>Desain Grafis</span>
-            <span class="badge badge-success badge-pill">Tidak Aktif</span>
-          </div>-->
         </div>
       </div>
-
-      <!-- <div class="col">
-        <div class="card mt-3">
-          <div class="media">
-            <img src="kucing.jpg" width="75" height="65" class="align-self-start mr-3" alt />
-            <div class="media-body">
-              <h5 class="mt-0">Prince Budy</h5>
-              <p>Prince_budy@gmail.com</p>
-            </div>
-          </div>
-          <hr />
-          <div>
-            <span>Profesional Programmer</span>
-            <button class="float-right">Aktif</button>
-          </div>
-          <div>
-            <span>Desain Grafis</span>
-            <button class="float-right">Tidak Aktif</button>
-          </div>
-        </div>
-      </div>-->
     </div>
-
-    <!-- <div class="row">
-      <div class="col">
-        <div class="card mt-3">
-          <div class="media">
-            <img src="kucing.jpg" width="75" height="65" class="align-self-start mr-3" alt />
-            <div class="media-body">
-              <h5 class="mt-0">Prince Budy</h5>
-              <p>Prince_budy@gmail.com</p>
-            </div>
-          </div>
-          <hr />
-          <div>
-            <span>Profesional Programmer</span>
-            <button class="float-right">Aktif</button>
-          </div>
-          <div>
-            <span>Desain Grafis</span>
-            <button class="float-right">Tidak Aktif</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card mt-3">
-          <div class="media">
-            <img src="kucing.jpg" width="75" height="65" class="align-self-start mr-3" alt />
-            <div class="media-body">
-              <h5 class="mt-0">Prince Budy</h5>
-              <p>Prince_budy@gmail.com</p>
-            </div>
-          </div>
-          <hr />
-          <div>
-            <span>Profesional Programmer</span>
-            <button class="float-right">Aktif</button>
-          </div>
-          <div>
-            <span>Desain Grafis</span>
-            <button class="float-right">Tidak Aktif</button>
-          </div>
-        </div>
-      </div>
-    </div>-->
   </div>
 </template>
 
@@ -141,8 +71,8 @@ export default {
     getsiswa() {
       this.loading = true;
       axios.get("/frontoffice/siswa").then((response) => {
-        this.siswa = response.data.data;
         if (response.data.success == true) {
+          this.siswa = response.data.data;
           this.loading = false;
         }
       });

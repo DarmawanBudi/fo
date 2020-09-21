@@ -44,31 +44,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="card mt-5 ml-5">
-        <div class="media">
-          <img src="kucing.jpg" width="75" height="65" class="align-self-start mr-3" alt />
-          <div class="media-body">
-            <h5 class="mt-0">Barjono</h5>
-            <p>Desain Grafis | Profesional Web Programing</p>
-          </div>
-        </div>
-        <hr />
-        <p>Barjono_dong@gmail.com</p>
-        <p>Beku Rt:05/Rw:22,Umbulharjo,Bantul</p>
-      </div>
-      <div class="card mt-5 ml-5">
-        <div class="media">
-          <img src="kucing.jpg" width="75" height="65" class="align-self-start mr-3" alt />
-          <div class="media-body">
-            <h5 class="mt-0">Barjono</h5>
-            <p>Desain Grafis | Profesional Web Programing</p>
-          </div>
-        </div>
-        <hr />
-        <p>Barjono_dong@gmail.com</p>
-        <p>Beku Rt:05/Rw:22,Umbulharjo,Bantul</p>
-      </div>-->
     </div>
   </div>
 </template>
@@ -90,9 +65,8 @@ export default {
     getinstruktur() {
       this.loading = true;
       axios.get("/frontoffice/instruktur").then((response) => {
-        this.instruktur = response.data.data;
-        // console.log(response);
         if (response.data.success == true) {
+          this.instruktur = response.data.data;
           this.loading = false;
         }
       });

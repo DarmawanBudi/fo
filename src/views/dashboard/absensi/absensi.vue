@@ -62,7 +62,6 @@ export default {
   },
   mounted() {
     this.getabsensi();
-    // this.poshabsensi();
   },
   methods: {
     postAbsensi() {
@@ -83,7 +82,7 @@ export default {
       };
       axios.post("/frontoffice/absensi/store",object).then((response) => {
         if (response.data.success == true) {
-          alert ("aaaaaaa");
+          alert ("Sukses");
           this.$router.push("/daftar_absensi")
 
         }
@@ -94,19 +93,12 @@ export default {
       let id = this.$route.params.id_program_kursus;
       this.loading = true;
       axios.get("/frontoffice/absensi/programkursus/" + id).then((response) => {
-        this.absensi = response.data.data;
         if (response.data.success == true) {
+          this.absensi = response.data.data;
           this.loading = false;
         }
       });
     },
-    // postabsensi() {
-    //   axios.post("/frontoffice/absensi/store").then((response) => {
-    //     if (response.data.success == true) {
-    //       this.input = response.data.data
-    //     }
-    //   });
-    // },
   },
 };
 </script>

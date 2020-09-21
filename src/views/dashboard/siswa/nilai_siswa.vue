@@ -76,8 +76,8 @@ export default {
     getsiswa() {
       this.loading = true;
       axios.get("/frontoffice/nilaisiswa").then((response) => {
-        this.siswa = response.data.data;
         if (response.data.success == true) {
+          this.siswa = response.data.data;
           this.loading = false;
         }
       });

@@ -65,9 +65,6 @@ return {
   mounted() {
     let nama = localStorage.getItem("nama");
     let foto = localStorage.getItem("foto");
-    // console.log(nama);
-    // console.log(foto);
-    // console.log(this);
     this.nama = nama,
     this.foto = foto
   }

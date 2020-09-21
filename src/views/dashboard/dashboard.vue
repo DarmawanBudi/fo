@@ -90,8 +90,6 @@ export default {
   },
   mounted() {
     this.getdashboard();
-    // this.$info();
-    // console.log(this);
   },
   methods: {
     getdashboard() {
@@ -99,7 +97,6 @@ export default {
       axios.get("/frontoffice").then((response) => {
         if (response.data.success == true) {
           this.dashboard = response.data.data;
-          // console.log(response);
           this.loading = false;
         }
       });

@@ -40,7 +40,6 @@ export default {
       axios.get("/frontoffice/jadwal").then((response) => {
         if (response.data.success == true) {
           this.jadwal = response.data.data;
-          // console.log(response);
           this.loading = false;
         }
       });
